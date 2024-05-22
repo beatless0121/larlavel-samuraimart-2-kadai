@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\MajorCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,11 +16,24 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::paginate(15);
+        if ($request->category !== null) {
+            $products = Product::where('category_id', $request->category)->sortable()->paginate(15);
+            $total_count = Product::where('category_id', $request->category)->count();
+            $category = Category::find($request->category);
+            $major_category = MajorCategory::find($category->major_category_id);
+        } else {
+            $products = Product::sortable()->paginate(15);
+            $total_count = "";
+            $category = null;
+            $major_category = null; 
+        }
+        $categories = Category::all();
+        $major_categories = MajorCategory::all();
  
-         return view('products.index', compact('products'));
+        return view('products.index', compact('products', 'category', 'major_category', 'categories', 'major_categories', 'total_count'));
+ 
     }
 
     /**
@@ -110,9 +124,9 @@ class ProductController extends Controller
     }
 
     public function favorite(Product $product)
-     {
-         Auth::user()->togglefavorite($product);
- 
-         return back();
-     }
+    {
+        Auth::user()->togglefavorite($product);
+
+        return back();
+    }
 }
