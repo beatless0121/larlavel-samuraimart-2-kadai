@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "298621256bc04351702544ed8f3dec28",
+    "content-hash": "720c403d9374c1c16661649ef84aac79",
     "packages": [
         {
             "name": "brick/math",
@@ -1060,6 +1060,66 @@
                 }
             ],
             "time": "2023-10-12T05:21:21+00:00"
+        },
+        {
+            "name": "goodby/csv",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/goodby/csv.git",
+                "reference": "f61513e1459ed1e732eeb3f4cc6cf80d29486cd7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/goodby/csv/zipball/f61513e1459ed1e732eeb3f4cc6cf80d29486cd7",
+                "reference": "f61513e1459ed1e732eeb3f4cc6cf80d29486cd7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "eher/phpunit": ">=1.6",
+                "mikey179/vfsstream": ">=1.1.0",
+                "mockery/mockery": ">=0.7.2",
+                "suin/php-expose": ">=1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Goodby\\CSV": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "suin",
+                    "email": "suinyeze@gmail.com",
+                    "homepage": "https://www.facebook.com/suinyeze",
+                    "role": "Developer, Renaming Specialist"
+                },
+                {
+                    "name": "reoring",
+                    "email": "mori.reo@gmail.com",
+                    "homepage": "https://www.facebook.com/reoring",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CSV import/export library",
+            "homepage": "https://github.com/goodby/csv",
+            "keywords": [
+                "csv",
+                "export",
+                "import"
+            ],
+            "support": {
+                "issues": "https://github.com/goodby/csv/issues",
+                "source": "https://github.com/goodby/csv/tree/1.0.0"
+            },
+            "time": "2012-12-06T17:04:38+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -3147,6 +3207,64 @@
                 }
             ],
             "time": "2024-03-18T11:26:52+00:00"
+        },
+        {
+            "name": "payjp/payjp-php",
+            "version": "1.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/payjp/payjp-php.git",
+                "reference": "5091fed5d2b3b8296d88bd222e630c95ae9f2310"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/payjp/payjp-php/zipball/5091fed5d2b3b8296d88bd222e630c95ae9f2310",
+                "reference": "5091fed5d2b3b8296d88bd222e630c95ae9f2310",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~5.7 || ~9.5",
+                "squizlabs/php_codesniffer": "~3.6"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.*-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Payjp\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Payjp and contributors",
+                    "homepage": "https://github.com/payjp/payjp-php/graphs/contributors"
+                }
+            ],
+            "description": "Payjp PHP Library",
+            "homepage": "https://pay.jp/",
+            "keywords": [
+                "api",
+                "payjp",
+                "payment processing"
+            ],
+            "support": {
+                "issues": "https://github.com/payjp/payjp-php/issues",
+                "source": "https://github.com/payjp/payjp-php/tree/1.6.1"
+            },
+            "time": "2024-05-14T01:52:27+00:00"
         },
         {
             "name": "phpoption/phpoption",

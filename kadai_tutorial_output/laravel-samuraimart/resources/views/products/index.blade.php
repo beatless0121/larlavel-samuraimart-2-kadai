@@ -5,7 +5,6 @@
      <div class="col-2">
         @component('components.sidebar', ['categories' => $categories, 'major_categories' => $major_categories])
         @endcomponent
-         @endcomponent
      </div>
      <div class="col-9">
       <div class="container">

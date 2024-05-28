@@ -19,7 +19,7 @@
                          <label for="name" class="text-md-left samuraimart-edit-user-info-label">氏名</label>
                      </div>
                      <div class="collapse show editUserName">
-                         <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $user->name }}" required autocomplete="name" autofocus placeholder="侍 太郎">
+                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $user->name }}" required autocomplete="name" autofocus placeholder="侍 太郎">
                          @error('name')
                          <span class="invalid-feedback" role="alert">
                              <strong>氏名を入力してください</strong>

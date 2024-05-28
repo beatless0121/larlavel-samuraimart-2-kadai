@@ -11,6 +11,16 @@ class Product extends Model
 {
     use HasFactory, Favoriteable, Sortable;
 
+    protected $fillable = [
+        'name',
+        'description',
+        'price',
+        'category_id',
+        'image',
+        'recommend_flag',
+        'carriage_flag',
+    ];
+
     public function category()
      {
          return $this->belongsTo(Category::class);
@@ -20,8 +30,4 @@ class Product extends Model
      {
          return $this->hasMany(Review::class);
      }
-
-     public function favorites() {
-        return $this->hasMany(Review::class);
-    }
 }
